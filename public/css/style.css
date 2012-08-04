@@ -1,0 +1,36 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.textaligncenter {
+	text-align: center !important;
+}
+
+.textalignright {
+	text-align: right !important;
+}
+
+.textalignleft {
+	text-align: left !important;
+}
+
+.verticalalignmiddle {
+	vertical-align: middle !important;
+}
+
+input:not([type="image"]), textarea {
+	box-sizing: content-box;
+}
+
+.smalltext {
+	font-size: 12px !important;
+}
+
+.smallertext {
+	font-size: 10px !important;
+}
+
+.wrap {
+	word-wrap: break-word !important;
+}
