@@ -171,3 +171,8 @@ if ( ! Request::cli() and Config::get('session.driver') !== '')
 {
 	Session::load();
 }
+
+/*
+| Require the Eden library, cuz it's AWESOMEEEEE (barney high-five)
+*/
+require_once path('app').'libraries/eden.php';

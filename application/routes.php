@@ -32,7 +32,10 @@
 |
 */
 
-Route::controller(Controller::detect());
+Route::get('/', function()
+{
+	return View::make('home.index');
+});
 
 /*
 |--------------------------------------------------------------------------
@@ -87,6 +90,8 @@ Event::listen('500', function()
 |
 */
 
+Route::controller(Controller::detect());
+
 Route::filter('before', function()
 {
 	// Do stuff before every request to your application...
@@ -112,10 +117,11 @@ Route::filter('auth', function()
  */
 View::composer('layouts/main', function($view)
 {
-	Asset::add('jquery', 'js/jquery-1.7.2.min.js');
-	Asset::add('script', 'js/scripts.js', 'jquery');
+	Asset::add('jquery', 'js/jquery.js');
+	Asset::add('scripts', 'js/scripts.js', 'jquery');
+	Asset::add('handlebars', 'js/handlebars.js');
     Asset::add('bootstrap-js', 'js/bootstrap.min.js', 'jquery');
-    Asset::add('bootstrap-css', 'css/bootstrap.min.css');
-    Asset::add('bootstrap-css-responsive', 'css/bootstrap-responsive.min.css', 'bootstrap-css');
+    Asset::add('bootstrap-css', 'css/bootstrap.css');
     Asset::add('style', 'css/style.css');
+    //Asset::style('google-fonts', 'http://fonts.googleapis.com/css?family=Lobster|Noticia+Text:700,700italic');
 });

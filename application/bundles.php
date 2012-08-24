@@ -34,7 +34,4 @@
 */
 
 return array(
-
-	'bob'
-
 );

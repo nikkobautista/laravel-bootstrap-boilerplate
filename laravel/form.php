@@ -20,7 +20,7 @@ class Form {
 	 * Registers a custom macro.
 	 *
 	 * @param  string   $name
-	 * @param  Closure  $input
+	 * @param  Closure  $macro
 	 * @return void
 	 */
 	public static function macro($name, $macro)
@@ -427,7 +427,7 @@ class Form {
 			$html[] = static::option($value, $display, $selected);
 		}
 
-		return '<optgroup label="'.HTML::entities($label).'">'.implode('', $html).'</option>';
+		return '<optgroup label="'.HTML::entities($label).'">'.implode('', $html).'</optgroup>';
 	}
 
 	/**
